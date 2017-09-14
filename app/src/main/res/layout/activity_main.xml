@@ -13,5 +13,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="create"/>
-
+    <Button
+        android:id="@+id/query"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="query"/>
+    <Button
+        android:id="@+id/delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="delete"/>
 </LinearLayout>

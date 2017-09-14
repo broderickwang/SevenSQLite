@@ -20,14 +20,13 @@ public interface IDaoSupport<T> {
 
 	long insert(T t);
 
-	long delete(T t);
-
-	long update(T t);
-
-	List<T> query(String selction, String[] selectionArgs );
+	int delete(T t);
 
 	int delete(String whereClause,String... whereArgs);
 
+	long update(T t);
+
 	int update(T t,String whereClause,String... whereArgs);
 
+	List<T> query(String selction, String[] selectionArgs );
 }
