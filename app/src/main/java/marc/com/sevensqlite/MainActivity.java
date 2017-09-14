@@ -39,7 +39,9 @@ public class MainActivity extends AppCompatActivity {
 			@Override
 			public void onClick(View v) {
 				List<Person> persons = support.query("id>?",new String[]{"0"});
-				Toast.makeText(MainActivity.this, ""+persons.size(), Toast.LENGTH_SHORT).show();
+				for (Person person : persons) {
+					Toast.makeText(MainActivity.this, ""+persons.toString(), Toast.LENGTH_SHORT).show();
+				}
 			}
 		});
 		Button d = (Button)findViewById(R.id.delete);
@@ -47,6 +49,14 @@ public class MainActivity extends AppCompatActivity {
 			@Override
 			public void onClick(View v) {
 				int a = support.delete(new Person("john",13));
+				Toast.makeText(MainActivity.this, ""+a, Toast.LENGTH_SHORT).show();
+			}
+		});
+		Button u = (Button)findViewById(R.id.update);
+		u.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				int a = support.update(new Person("johddn",23),"id>?",new String[]{"0"});
 				Toast.makeText(MainActivity.this, ""+a, Toast.LENGTH_SHORT).show();
 			}
 		});

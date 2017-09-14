@@ -162,8 +162,9 @@ public class DaoSupport<T> implements IDaoSupport<T> {
 
 					c.moveToPosition(i);
 					for (Field fid : fids) {
+						fid.setAccessible(true);
 						for (Method method : methods) {
-							if(method.getName().contains("set")&&method.getName().contains(fid.getName())){
+							if(method.getName().contains("set")&&method.getName().toLowerCase().contains(fid.getName())){
 								String type = fid.getGenericType().toString();
 								try {
 									switch (type){
