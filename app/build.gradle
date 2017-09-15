@@ -30,5 +30,5 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.github.348476129:RxPermission:0.1.0'
     compile 'com.tbruyelle.rxpermissions:rxpermissions:0.9.4@aar'
-
+    compile 'com.android.support:recyclerview-v7:25.3.1'
 }
